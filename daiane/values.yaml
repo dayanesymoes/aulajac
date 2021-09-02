@@ -39,6 +39,7 @@ securityContext: {}
 service:
   type: ClusterIP
   port: 80
+  targetPort: 3000
 
 ingress:
   enabled: true
@@ -50,7 +51,7 @@ ingress:
     - host: daiane.jacstackd.jacexperts.io 
       paths:
         - path: /
-          pathType: Prefix
+          pathType: ImplementationSpecific
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
